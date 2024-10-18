@@ -49,21 +49,45 @@
 #
 # create_person()
 
-class Rectangle:
-    def __init__(self, width, length):
-        self.width = width
-        self.length = length
+# class Rectangle:
+#     def __init__(self, width, length):
+#         self.width = width
+#         self.length = length
+#
+#     def area(self):
+#         return self.width * self.length
+#
+#     def perimeter(self):
+#         return 2*(self.length+self.width)
+#
+#
+# val = Rectangle(4,5)
+# val.width = 5
+# # print(f'Периметр = {P}, а площадь = {S}, хватит ныть, займись делом')
+# print(f'Площадь = {val.area()} Периметр = {val.perimeter()}')
 
-    def area(self):
-        return self.width * self.length
+class BankAccount:
+    def __init__(self, number, sum):
+        self.account_number = number  # Номер счета
+        self.balance = sum  # Баланс
+        print(f'Номер лицевого счета "{number}" Начальный баланс: {sum} EURO')
 
-    def perimeter(self):
-        return 2*(self.length+self.width)
+    def add(self, sum):
+        self.balance = self.balance + sum
+        print(f'Добавочная сумма {sum} EURO, текущий баланс: {a.balance} EURO')
+
+    def withdraw(self, sum):
+        if sum < self.balance:
+            self.balance = self.balance - sum
+            print(f'Потратили на покупки: {sum} EUR, текущий баланс {a.balance}')
+        else:
+            print(f'Недостаточно средств')
 
 
-val = Rectangle(4,5)
-val.width = 5
-# print(f'Периметр = {P}, а площадь = {S}, хватит ныть, займись делом')
-print(f'Площадь = {val.area()} Периметр = {val.perimeter()}')
-
+a = BankAccount('3473 4256 3466 3356', 5000)
+a.add(300)
+a.withdraw(500)
+a.withdraw(70000)
+a.withdraw(500)
+a.add(500)
 
